@@ -51,4 +51,14 @@ Route::get('detail/{id}','FarmersController@updateDetails');
 
 Route::post('updating', 'FarmersController@updateDetail');
 
+Route::get('addProducts', function (){
+    return view('pages.addProducts');
+});
+
+Route::post('addItems', 'ProductsController@addProduct');
+
+Route::get('getAllProducts', 'ProductsController@getProducts');
+Route::get('product/{id}', 'ProductsController@update');
+
+Route::post('updateProduct','ProductsController@UpdateRecord');
 
